@@ -2,14 +2,12 @@
 
 from axltoolkit import AxlToolkit
 
-from credentials import user, password, platform_user, platform_password
+from credentials import user, password, ucm_ip, ucm_version, platform_user, platform_password
 
 # Be sure to update the credentials.py file with your AXL User and Platform User credentials
 
-# Put the IP address of your UCM Publisher
-ucm_ip = '10.101.10.45'
 
-axl = AxlToolkit(username=user, password=password, server_ip=ucm_ip, tls_verify=False, version='14.0')
+axl = AxlToolkit(username=user, password=password, server_ip=ucm_ip, tls_verify=False, version=ucm_version)
 
 
 # Example of using Thick AXL to retrieve User Info

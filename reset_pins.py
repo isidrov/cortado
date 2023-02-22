@@ -8,7 +8,7 @@ import csv
 import os
 
 dir_project = os.path.dirname(os.path.abspath(__file__))
-DataFiles = os.path.join(dir_project, 'DataFiles')
+DataFiles = os.path.join(dir_project, 'inputDataFiles')
 
 # Be sure to update the credentials.py file with your AXL User and Platform User credentials
 
@@ -17,8 +17,6 @@ ucm_ip = '10.101.10.45'
 version = '14.0'
 
 axl = AxlToolkit(username=user, password=password, server_ip=ucm_ip, tls_verify=False, version=version)
-
-
 
 with open(os.path.join(DataFiles ,'reset_pins.csv')) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter='\t')
